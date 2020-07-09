@@ -1,5 +1,5 @@
 /* @flow */
-
+// 包含运行时代码以及编译器 
 import config from 'core/config'
 import { warn, cached } from 'core/util/index'
 import { mark, measure } from 'core/util/perf'

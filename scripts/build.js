@@ -4,6 +4,7 @@ const zlib = require('zlib')
 const rollup = require('rollup')
 const terser = require('terser')
 
+// 如果不存在dist文件夹，则创建
 if (!fs.existsSync('dist')) {
   fs.mkdirSync('dist')
 }
@@ -11,8 +12,10 @@ if (!fs.existsSync('dist')) {
 let builds = require('./config').getAllBuilds()
 
 // filter builds via command line arg
+// 如果有参数，即构建ssr以及weex项目
 if (process.argv[2]) {
   const filters = process.argv[2].split(',')
+  // 其实就是筛选出key或 dest中包含参数的配置项
   builds = builds.filter(b => {
     return filters.some(f => b.output.file.indexOf(f) > -1 || b._name.indexOf(f) > -1)
   })
