@@ -269,6 +269,7 @@ const defaultStrat = function (parentVal: any, childVal: any): any {
 
 /**
  * Validate component names
+ * 检查引入的组件名称是否合法
  */
 function checkComponents (options: Object) {
   for (const key in options.components) {
@@ -384,6 +385,7 @@ function assertObjectType (name: string, value: any, vm: ?Component) {
 /**
  * Merge two option objects into a new one.
  * Core utility used in both instantiation and inheritance.
+ * child是new Vue(options)时传入的options
  */
 export function mergeOptions (
   parent: Object,
