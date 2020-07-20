@@ -51,6 +51,9 @@ export function initMixin (Vue: Class<Component>) {
       vm._renderProxy = vm
     }
     // expose real self
+    /**
+     * Vue的初始化过程，逻辑很清楚
+     */
     vm._self = vm
     initLifecycle(vm)
     initEvents(vm)
