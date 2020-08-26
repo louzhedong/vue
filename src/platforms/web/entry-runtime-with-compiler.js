@@ -47,7 +47,7 @@ Vue.prototype.$mount = function (
             )
           }
         }
-      } else if (template.nodeType) {
+      } else if (template.nodeType) {  // template本身是ElementNode
         template = template.innerHTML
       } else {
         if (process.env.NODE_ENV !== 'production') {
