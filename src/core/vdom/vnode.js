@@ -1,5 +1,5 @@
 /* @flow */
-
+// 虚拟Node
 export default class VNode {
   tag: string | void;
   data: VNodeData | void;

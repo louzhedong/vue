@@ -51,7 +51,7 @@ export function _createElement (
   children?: any,
   normalizationType?: number
 ): VNode | Array<VNode> {
-  if (isDef(data) && isDef((data: any).__ob__)) {
+  if (isDef(data) && isDef((data: any).__ob__)) { 
     process.env.NODE_ENV !== 'production' && warn(
       `Avoid using observed data object as vnode data: ${JSON.stringify(data)}\n` +
       'Always create fresh vnode data objects in each render!',
@@ -60,7 +60,7 @@ export function _createElement (
     return createEmptyVNode()
   }
   // object syntax in v-bind
-  if (isDef(data) && isDef(data.is)) {
+  if (isDef(data) && isDef(data.is)) { // 如果v-bind有is属性
     tag = data.is
   }
   if (!tag) {
